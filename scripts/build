@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+
+set -e
+
+pyvenv env
+
+export PATH=env/bin:${PATH}
+
+env/bin/pip install -r requirements.txt
