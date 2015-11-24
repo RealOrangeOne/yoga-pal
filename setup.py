@@ -8,6 +8,6 @@ setup (
 	],
 	entry_points='''
 		[console_scripts]
-		yopa=project.cli:cli
+		yoga=project.cli:cli
 	''',
 )
