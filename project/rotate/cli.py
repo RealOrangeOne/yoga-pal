@@ -1,6 +1,7 @@
 import click
 import os
 
+
 SCREEN_COMMAND = "xrandr -o {}"
 SCREEN_FLIP = "inverted"
 SCREEN_DEFAULT = "normal"
@@ -8,6 +9,7 @@ SCREEN_DEFAULT = "normal"
 TOUCH_COMMAND = "xinput set-prop 'ELAN Touchscreen' 'Coordinate Transformation Matrix' {}"
 TOUCH_FLIP = "-1 0 1 0 -1 1 0 0 1"
 TOUCH_DEFAULT = "1 0 0 0 1 0 0 0 1"
+
 
 @click.command('rotate', short_help='Rotate components.')
 @click.argument('component', default='all', type=click.Choice(['screen', 'touch', 'all']))

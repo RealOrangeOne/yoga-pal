@@ -1,8 +1,10 @@
 import click
 import os
 
+
 TRACKPAD_COMMAND = "xinput {} 'SynPS/2 Synaptics TouchPad'"
 TOUCH_COMMAND = "xinput {} 'ELAN Touchscreen'"
+
 
 @click.command('disable', short_help='Disable component.')
 @click.argument('component', default='all', type=click.Choice(['trackpad', 'touch', 'all']))
