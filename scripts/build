@@ -7,3 +7,6 @@ pyvenv env
 export PATH=env/bin:${PATH}
 
 env/bin/pip install -r requirements.txt
+
+echo "Installing..."
+pip install --editable .
