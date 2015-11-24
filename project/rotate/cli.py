@@ -11,7 +11,7 @@ TOUCH_DEFAULT = "1 0 0 0 1 0 0 0 1"
 
 @click.command('rotate', short_help='Rotate components.')
 @click.argument('component', default='all', type=click.Choice(['screen', 'touch', 'all']))
-@click.option('--flipped/--default', default=None)
+@click.option('--flip/--default', default=None)
 def cli(component, flip):
     screen_addon = SCREEN_DEFAULT if not flip else SCREEN_FLIP
     touch_addon = TOUCH_DEFAULT if not flip else TOUCH_FLIP
