@@ -1,6 +1,5 @@
 import click
 import os
-import subprocess
 
 
 TRACKPAD_COMMAND = "xinput enable 'SynPS/2 Synaptics TouchPad'"

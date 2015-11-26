@@ -1,6 +1,5 @@
 import click
 import os
-import subprocess
 
 
 TRACKPAD_COMMAND = "xinput disable 'SynPS/2 Synaptics TouchPad'"
