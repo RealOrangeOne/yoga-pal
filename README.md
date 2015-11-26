@@ -7,10 +7,16 @@ Command line tool for controlling screen rotation on Lenovo Yoga laptops. This t
 * Pip
 
 ## Installation
-Clone the repo, `cd` into the directory, and then:
+Installation can be done in 2 ways, both of which involve the `install.sh` script.
+##### Option 1
+1. Clone the repo
+2. cd into it
+3. run `install.sh`
 
-    scripts/build
-    sudo pip install -e .
+##### Option 2
+1. Download the `install.sh` file
+2. Put the file in the directory you want to install into
+3. run `install.sh`
 
 ## Development
 If you wish to install this in a development environment, clone the repo, and then:
