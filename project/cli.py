@@ -7,7 +7,6 @@ FORMAT = "[%(levelname)s]: %(message)s"
 logging.basicConfig(format=FORMAT, level=logging.DEBUG)
 logging.getLogger("requests").setLevel(logging.WARNING)
 
-
 class YogaPalCLI(click.MultiCommand):
 
     def list_commands(self, ctx):
@@ -16,7 +15,7 @@ class YogaPalCLI(click.MultiCommand):
     def get_command(self, ctx, name):
         ns = {}
         if name not in self.list_commands(ctx):
-            return
+            return 1
         try:
             fn = os.path.join(os.path.dirname(__file__), name + '/cli.py')
             with open(fn) as f:
@@ -24,7 +23,7 @@ class YogaPalCLI(click.MultiCommand):
                 eval(code, ns, ns)
             return ns['cli']
         except:
-            return
+            return 1
 
 cli = YogaPalCLI(help='This tool\'s subcommands are loaded from a plugin folder dynamically.')
 
