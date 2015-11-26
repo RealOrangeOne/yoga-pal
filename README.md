@@ -31,10 +31,13 @@ __Note__: Rotating touchscreen is likely done automatically with screen, and can
 
 Flags `--flip` and `--default` can be added to this command to specify the orientation required.
 
-### Disable
+### Enable & Disable
+    yoga enable trackpad
     yoga disable trackpad
-    yoga disable touch
-    yoga disable all
-Disables the trackpad, touch screen, or both. All is used by default if no component is given.
 
-Flags `--enable` and `--disable` can be added to this command to specify the status required.
+    yoga enable touch
+    yoga disable touch
+
+    yoga enable all
+    yoga disable all
+Disables / Enables the trackpad, touch screen, or both. All is used by default if no component is given.
