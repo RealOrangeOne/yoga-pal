@@ -11,13 +11,15 @@ Clone the repo, `cd` into the directory, and then:
 
     scripts/build
     sudo pip install -e .
-__Note__: Installation must be done with an active internet connection.
 
 ## Development
+If you wish to install this in a development environment, clone the repo, and then:
+
 	scripts/build
-	source env/bin/activate
+    source env/bin/activate
 	pip install --editable .
 
+__Note__: Installation must be done with an active internet connection.
 
 ## Usage
 
@@ -41,3 +43,11 @@ Flags `--flip` and `--default` can be added to this command to specify the orien
     yoga enable all
     yoga disable all
 Disables / Enables the trackpad, touch screen, or both. All is used by default if no component is given.
+
+### Modes
+    yoga mode laptop
+    yoga mode tablet
+
+    yoga mode list
+
+Switches your device between the modes of yoga devices, configuring the optimum setup automatically. You can use `yoga mode list` to see all the available modes.
