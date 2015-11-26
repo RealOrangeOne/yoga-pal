@@ -15,7 +15,7 @@ class YogaPalCLI(click.MultiCommand):
     def get_command(self, ctx, name):
         ns = {}
         if name not in self.list_commands(ctx):
-            return 1
+            return
         try:
             fn = os.path.join(os.path.dirname(__file__), name + '/cli.py')
             with open(fn) as f:
@@ -23,7 +23,7 @@ class YogaPalCLI(click.MultiCommand):
                 eval(code, ns, ns)
             return ns['cli']
         except:
-            return 1
+            return
 
 cli = YogaPalCLI(help='This tool\'s subcommands are loaded from a plugin folder dynamically.')
 
