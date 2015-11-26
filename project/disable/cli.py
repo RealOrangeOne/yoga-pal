@@ -12,7 +12,6 @@ TOUCH_COMMAND = "xinput {} 'ELAN Touchscreen'"
 def cli(component, enable):
     exit_code = 0
     mode = "enable" if enable else "disable"
-    print("Mode", mode)
     if component in ['trackpad', 'all']:
         exit_code = os.system(TRACKPAD_COMMAND.format(mode))
 
