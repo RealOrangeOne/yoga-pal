@@ -5,5 +5,15 @@ set -e
 export PATH=env/bin:${PATH}
 
 flake8 project --ignore=E128,E501
+echo ">> Flake8 Tests Completed"
 
-echo "All Tests Passed!"
+echo ">> Installing yoga-pal CLI..."
+bash scripts/build
+
+source env/bin/activate
+
+echo ">> Testing modes for errors..."
+yoga mode laptop
+yoga mode tablet
+
+echo ">> Tests Complete!"
