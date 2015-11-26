@@ -2,7 +2,9 @@ import click
 from project.rotate.cli import cli as rotate_cli
 from project.disable.cli import cli as disable_cli
 
+
 MODES = ['laptop', 'tablet']
+
 
 @click.group('mode', short_help='Rotate components.')
 def cli():
