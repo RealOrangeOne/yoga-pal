@@ -16,7 +16,7 @@ TOUCH_DEFAULT = "1 0 0 0 1 0 0 0 1"
 @click.argument('component', default='all', type=click.Choice(['screen', 'touch', 'all']))
 @click.option('--flip/--default', default=None)
 def cli(component, flip):
-    if flip == None:  # If no rotation flag was given, flip the screen
+    if flip is None:  # If no rotation flag was given, flip the screen
         inverted = is_screen_currently_inverted()
         screen_addon = SCREEN_DEFAULT if inverted else SCREEN_FLIP
         touch_addon = TOUCH_DEFAULT if inverted else TOUCH_FLIP
@@ -45,7 +45,7 @@ def is_screen_currently_inverted():
     original_output = subprocess.check_output("xrandr --query", shell=True)
     os.system("xrandr -o normal")
     new_output = subprocess.check_output("xrandr --query", shell=True)
-    was_inverted =  not (new_output == original_output)
+    was_inverted = not (new_output == original_output)
     if was_inverted:
         os.system("xrandr -o inverted")  # restore it to the way it was initially
 

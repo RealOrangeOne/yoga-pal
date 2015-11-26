@@ -7,6 +7,7 @@ FORMAT = "[%(levelname)s]: %(message)s"
 logging.basicConfig(format=FORMAT, level=logging.DEBUG)
 logging.getLogger("requests").setLevel(logging.WARNING)
 
+
 class YogaPalCLI(click.MultiCommand):
 
     def list_commands(self, ctx):
