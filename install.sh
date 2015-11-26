@@ -2,7 +2,7 @@
 
 set -e
 
-if [! -f ./setup.py ]; then
+if [ ! -f ./setup.py ]; then
     echo ">> Cloning repo..."
     git clone https://github.com/RealOrangeOne/yoga-pal.git
     cd yoga-pal
