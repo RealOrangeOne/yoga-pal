@@ -10,7 +10,7 @@ logging.getLogger("requests").setLevel(logging.WARNING)
 class YogaPalCLI(click.MultiCommand):
 
     def list_commands(self, ctx):
-        return ['rotate', 'disable']
+        return ['rotate', 'disable', 'mode']
 
     def get_command(self, ctx, name):
         ns = {}

@@ -3,12 +3,12 @@ from project.rotate.cli import cli as rotate_cli
 from project.disable.cli import cli as disable_cli
 
 
-@click.group()
-def cli(ctx):
+@click.group('mode', short_help='Rotate components.')
+def cli():
     pass
 
 
-@cli.command()
+@cli.command('tablet')
 @click.pass_context
 def tablet(ctx):
     exit_code = ctx.invoke(rotate_cli, component='all', flip=True)
@@ -17,7 +17,7 @@ def tablet(ctx):
     return exit_code
 
 
-@cli.command
+@cli.command('laptop')
 @click.pass_context
 def laptop(ctx):
     exit_code = ctx.invoke(rotate_cli, component='all', flip=False)
