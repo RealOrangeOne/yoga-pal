@@ -13,7 +13,7 @@ def cli(component):
     if component in ['trackpad', 'all']:
         exit_code = os.system(TRACKPAD_COMMAND)
 
-    if exit_code != 0 and component in ['touch', 'all']:
+    if exit_code == 0 and component in ['touch', 'all']:
         exit_code = os.system(TOUCH_COMMAND)
 
     return exit_code
